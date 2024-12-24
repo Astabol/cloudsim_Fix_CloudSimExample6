@@ -25,31 +25,51 @@ More information can be found on the [CloudSim's web site](http://cloudbus.org/c
 
 The downloaded package contains all the source code, examples, jars, and API html files.
 
-# Install CloudSim (Linux)
-
-1) Install Java JDK21 on your system:
-``` console
-sudo apt install openjdk-21-jdk
-```
-2) Set Java JDK21 as default:
-``` console
-sudo update-java-alternatives --set java-1.21.0-openjdk-amd64
-```
-
-3) Install Maven as shown on the [Official Website](https://maven.apache.org/install.html)
-4) Compile and run tests:
-``` console
-mvn build
-```
-``` console
-mvn test
-```
-5) Run an example in cloudsim-examples:
-```
+# Installation of CloudSim
+**Windows**
+1) Install Java Java Development Kit(JDK) 21 o your system from [Official Website](https://www.oracle.com/in/java/technologies/downloads/#java21) as shown in [JDK Installation Instructions](https://docs.oracle.com/en/java/javase/23/install/overview-jdk-installation.html)
+2) Install Maven as shown on the [Official Website](https://maven.apache.org/install.html)
+4) Compile and Run tests in Command Prompt:
+  ```prompt
+  mvn build
+  mvn test
+  ```
+5) Run an example (CloudsimExample1) in cloudsim-examples in Command Prompt:
+```prompt
 mvn exec:java -pl modules/cloudsim-examples/ -Dexec.mainClass=org.cloudbus.cloudsim.examples.CloudSimExample1
 ```
 
-**Suggestion:** Use an IDE such as IDEA Intellij to faciliate steps 4) and 5)
+**Linux**
+  1) Install Java JDK21 on your system:
+  - On Debian-based Linux & Windows WSL2: 
+    ```bash
+      sudo apt install openjdk-21-jdk
+    ```
+  - On Red Hat-based Linux:  
+    ```bash  
+    sudo yum install java-21-openjdk
+    ```
+  2) Set Java JDK21 as default: 
+  - On Debian-based Linux & Windows WSL2:
+    ```bash
+    sudo update-java-alternatives --set java-1.21.0-openjdk-amd64
+    ```
+  - On Red Hat-based Linux: 
+    ```bash
+    sudo update-alternatives --config 'java'
+    ```
+  3) Install Maven as shown on the [Official Website](https://maven.apache.org/install.html)
+  4) Compile and Run tests in Terminal:
+  ```bash
+  mvn build
+  mvn test
+  ```
+  5) Run an example (CloudsimExample1) in cloudsim-examples in Terminal:
+  ```bash
+  mvn exec:java -pl modules/cloudsim-examples/ -Dexec.mainClass=org.cloudbus.cloudsim.examples.CloudSimExample1
+  ```
+
+  **Suggestion:** Use an IDE such as IDEA Intellij to faciliate steps 4) and 5) from both Windows and Linux (Except WSL & WSL2 Without GUI)
 
 # Preferred Publication (Currently Under Revision, Available on arxiv only as a pre-print) #
   * Remo Andreoli, Jie Zhao, Tommaso Cucinotta, and Rajkumar Buyya, [CloudSim 7G: An Integrated Toolkit for Modeling and Simulation of Future Generation Cloud Computing Environments](https://arxiv.org/pdf/2408.13386), arXiv:2408.13386 [cs.DC], 2024.
