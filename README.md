@@ -43,7 +43,7 @@ mvn exec:java -pl modules/cloudsim-examples/ -Dexec.mainClass=org.cloudbus.cloud
   1) Install Java JDK21 on your system:
   - On Debian-based Linux & Windows WSL2: 
     ```bash
-      sudo apt install openjdk-21-jdk
+    sudo apt install openjdk-21-jdk
     ```
   - On Red Hat-based Linux:  
     ```bash  
